@@ -1,0 +1,143 @@
+[
+  {
+    "userId": "USR123457",
+    "productId": "P002",
+    "rating": 4.5,
+    "comment": "Excellent product quality, highly recommended!",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-18T08:00:00Z",
+    "updatedAt": "2024-03-18T08:00:00Z"
+  },
+  {
+    "userId": "USR123458",
+    "productId": "P003",
+    "rating": 3.8,
+    "comment": "Good product, but could be better.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-19T10:00:00Z",
+    "updatedAt": "2024-03-19T10:00:00Z"
+  },
+  {
+    "userId": "USR123459",
+    "productId": "P004",
+    "rating": 4.2,
+    "comment": "Satisfied with the purchase, good value for money.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-20T12:00:00Z",
+    "updatedAt": "2024-03-20T12:00:00Z"
+  },
+  {
+    "userId": "USR123460",
+    "productId": "P005",
+    "rating": 5,
+    "comment": "Amazing product, exceeded my expectations!",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-21T14:00:00Z",
+    "updatedAt": "2024-03-21T14:00:00Z"
+  },
+  {
+    "userId": "USR123461",
+    "productId": "P006",
+    "rating": 3.5,
+    "comment": "Product quality could be improved.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-22T16:00:00Z",
+    "updatedAt": "2024-03-22T16:00:00Z"
+  },
+  {
+    "userId": "USR123462",
+    "productId": "P007",
+    "rating": 4.7,
+    "comment": "Very satisfied with the product, will buy again!",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-23T18:00:00Z",
+    "updatedAt": "2024-03-23T18:00:00Z"
+  },
+  {
+    "userId": "USR123463",
+    "productId": "P008",
+    "rating": 4.3,
+    "comment": "Happy with the purchase, great product quality.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-24T20:00:00Z",
+    "updatedAt": "2024-03-24T20:00:00Z"
+  },
+  {
+    "userId": "USR123464",
+    "productId": "P009",
+    "rating": 4.8,
+    "comment": "Excellent service and product quality!",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-25T22:00:00Z",
+    "updatedAt": "2024-03-25T22:00:00Z"
+  },
+  {
+    "userId": "USR123465",
+    "productId": "P010",
+    "rating": 3.9,
+    "comment": "Product met expectations, but delivery was slow.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-26T00:00:00Z",
+    "updatedAt": "2024-03-26T00:00:00Z"
+  },
+  {
+    "userId": "USR123466",
+    "productId": "P011",
+    "rating": 4.2,
+    "comment": "Great polo shirt, comfortable and fits well.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-27T14:00:00Z",
+    "updatedAt": "2024-03-27T14:00:00Z"
+  },
+  {
+    "userId": "USR123467",
+    "productId": "P012",
+    "rating": 3.7,
+    "comment": "Satisfactory product, but could be improved.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-28T16:00:00Z",
+    "updatedAt": "2024-03-28T16:00:00Z"
+  },
+  {
+    "userId": "USR123468",
+    "productId": "P013",
+    "rating": 4.0,
+    "comment": "Love the design and comfort of these sneakers.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-29T12:00:00Z",
+    "updatedAt": "2024-03-29T12:00:00Z"
+  },
+  {
+    "userId": "USR123469",
+    "productId": "P014",
+    "rating": 4.2,
+    "comment": "These sandals are gorgeous and comfortable to wear.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-30T14:00:00Z",
+    "updatedAt": "2024-03-30T14:00:00Z"
+  },
+  {
+    "userId": "USR123470",
+    "productId": "P015",
+    "rating": 4.4,
+    "comment": "These boots are fantastic! Very comfortable and stylish.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-03-31T16:00:00Z",
+    "updatedAt": "2024-03-31T16:00:00Z"
+  },
+  {
+    "userId": "USR123471",
+    "productId": "P016",
+    "rating": 4.3,
+    "comment": "These ballet flats are perfect! Very comfortable to wear all day.",
+    "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "createdAt": "2024-04-01T18:00:00Z",
+    "updatedAt": "2024-04-01T18:00:00Z"
+  }
+]
+
+
+
+
+
+

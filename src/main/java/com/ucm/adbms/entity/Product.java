@@ -20,7 +20,9 @@ public class Product {
     private String productId;
     private String name;
     private String description;
+
     private String categoryId;
+
     private String vendorId;
 
     private String imageurl ;

@@ -1,0 +1,284 @@
+[
+  {
+    "productId": "P012",
+    "name": "Women's Running Shoes",
+    "description": "Comfortable and stylish running shoes for women.",
+    "categoryId": "Cat002",
+    "vendorId": "V012",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-1.jpg",
+    "productVariant": [
+      {
+        "name": "Pink",
+        "description": "Lightweight pink running shoes.",
+        "color": "Pink",
+        "size": "US 7",
+        "MRP": 50,
+        "price": 40,
+        "quantity": 50,
+        "commission": 0.05
+      },
+      {
+        "name": "Black",
+        "description": "Sleek black running shoes.",
+        "color": "Black",
+        "size": "US 8",
+        "MRP": 60,
+        "price": 45,
+        "quantity": 40,
+        "commission": 0.06
+      }
+    ],
+    "reviews": [
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa6",
+        "userId": "USR123467",
+        "productId": "P012",
+        "rating": 4.5,
+        "comment": "Love these shoes! They're very comfortable for running.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-1.jpg",
+        "createdAt": "2024-03-28T10:00:00Z",
+        "updatedAt": "2024-03-28T10:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.5,
+    "isAvailable": true,
+    "createdAt": "2024-04-01T11:00:00Z",
+    "updatedAt": "2024-04-01T11:00:00Z"
+  },
+  {
+    "productId": "P013",
+    "name": "Men's Casual Sneakers",
+    "description": "Stylish and versatile sneakers for everyday wear.",
+    "categoryId": "Cat002",
+    "vendorId": "V013",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-2.jpg",
+    "productVariant": [
+      {
+        "name": "White",
+        "description": "Classic white sneakers with a comfortable fit.",
+        "color": "White",
+        "size": "US 9",
+        "MRP": 60,
+        "price": 50,
+        "quantity": 30,
+        "commission": 0.07
+      },
+      {
+        "name": "Black",
+        "description": "Sleek black sneakers suitable for any occasion.",
+        "color": "Black",
+        "size": "US 10",
+        "MRP": 70,
+        "price": 55,
+        "quantity": 25,
+        "commission": 0.08
+      }
+    ],
+    "reviews": [
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa7",
+        "userId": "USR123468",
+        "productId": "P013",
+        "rating": 4.0,
+        "comment": "Love the design and comfort of these sneakers.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-2.jpg",
+        "createdAt": "2024-03-29T12:00:00Z",
+        "updatedAt": "2024-03-29T12:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.0,
+    "isAvailable": true,
+    "createdAt": "2024-04-02T13:00:00Z",
+    "updatedAt": "2024-04-02T13:00:00Z"
+  },
+  {
+    "productId": "P014",
+    "name": "Women's High Heel Sandals",
+    "description": "Elegant and stylish high heel sandals for women.",
+    "categoryId": "Cat002",
+    "vendorId": "V014",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-3.jpg",
+    "productVariant": [
+      {
+        "name": "Beige",
+        "description": "Beige sandals with a comfortable heel.",
+        "color": "Beige",
+        "size": "US 6",
+        "MRP": 80,
+        "price": 65,
+        "quantity": 20,
+        "commission": 0.09
+      },
+      {
+        "name": "Black",
+        "description": "Classic black sandals suitable for formal occasions.",
+        "color": "Black",
+        "size": "US 7",
+        "MRP": 90,
+        "price": 70,
+        "quantity": 15,
+        "commission": 0.1
+      }
+    ],
+    "reviews": [
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa8",
+        "userId": "USR123469",
+        "productId": "P014",
+        "rating": 4.2,
+        "comment": "These sandals are gorgeous and comfortable to wear.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-3.jpg",
+        "createdAt": "2024-03-30T14:00:00Z",
+        "updatedAt": "2024-03-30T14:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.2,
+    "isAvailable": true,
+    "createdAt": "2024-04-03T15:00:00Z",
+    "updatedAt": "2024-04-03T15:00:00Z"
+  },
+  {
+    "productId": "P015",
+    "name": "Men's Leather Boots",
+    "description": "Durable and stylish leather boots for men.",
+    "categoryId": "Cat002",
+    "vendorId": "V015",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-4.jpg",
+    "productVariant": [
+      {
+        "name": "Brown",
+        "description": "Classic brown leather boots suitable for any outfit.",
+        "color": "Brown",
+        "size": "US 8",
+        "MRP": 100,
+        "price": 80,
+        "quantity": 25,
+        "commission": 0.12
+      },
+      {
+        "name": "Black",
+        "description": "Sleek black leather boots for a modern look.",
+        "color": "Black",
+        "size": "US 9",
+        "MRP": 110,
+        "price": 85,
+        "quantity": 20,
+        "commission": 0.13
+      }
+    ],
+    "reviews": [
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa9",
+        "userId": "USR123470",
+        "productId": "P015",
+        "rating": 4.4,
+        "comment": "These boots are fantastic! Very comfortable and stylish.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-4.jpg",
+        "createdAt": "2024-03-31T16:00:00Z",
+        "updatedAt": "2024-03-31T16:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.4,
+    "isAvailable": true,
+    "createdAt": "2024-04-04T17:00:00Z",
+    "updatedAt": "2024-04-04T17:00:00Z"
+  },
+  {
+    "productId": "P016",
+    "name": "Women's Ballet Flats",
+    "description": "Comfortable and elegant ballet flats for women.",
+    "categoryId": "Cat002",
+    "vendorId": "V016",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-5.jpg",
+    "productVariant": [
+      {
+        "name": "Silver",
+        "description": "Stylish silver ballet flats suitable for any occasion.",
+        "color": "Silver",
+        "size": "US 7",
+        "MRP": 70,
+        "price": 55,
+        "quantity": 30,
+        "commission": 0.08
+      },
+      {
+        "name": "Black",
+        "description": "Classic black ballet flats with a comfortable fit.",
+        "color": "Black",
+        "size": "US 8",
+        "MRP": 75,
+        "price": 60,
+        "quantity": 25,
+        "commission": 0.09
+      }
+    ],
+    "reviews": [
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aaa",
+        "userId": "USR123471",
+        "productId": "P016",
+        "rating": 4.3,
+        "comment": "These ballet flats are perfect! Very comfortable to wear all day.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-5.jpg",
+        "createdAt": "2024-04-01T18:00:00Z",
+        "updatedAt": "2024-04-01T18:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.3,
+    "isAvailable": true,
+    "createdAt": "2024-04-05T19:00:00Z",
+    "updatedAt": "2024-04-05T19:00:00Z"
+  },
+  {
+    "productId": "P017",
+    "name": "Men's Formal Shoes",
+    "description": "Classic and stylish formal shoes for men.",
+    "categoryId": "Cat002",
+    "vendorId": "V017",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-6.jpg",
+    "productVariant": [
+      {
+        "name": "Brown",
+        "description": "Brown formal shoes suitable for office wear.",
+        "color": "Brown",
+        "size": "US 9",
+        "MRP": 90,
+        "price": 70,
+        "quantity": 20,
+        "commission": 0.1
+      },
+      {
+        "name": "Black",
+        "description": "Sleek black formal shoes for a professional look.",
+        "color": "Black",
+        "size": "US 10",
+        "MRP": 100,
+        "price": 75,
+        "quantity": 15,
+        "commission": 0.12
+      }
+    ],
+    "reviews": [
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aab",
+        "userId": "USR123472",
+        "productId": "P017",
+        "rating": 4.1,
+        "comment": "These formal shoes are excellent! Very comfortable and stylish.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/footwear-6.jpg",
+        "createdAt": "2024-04-02T20:00:00Z",
+        "updatedAt": "2024-04-02T20:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.1,
+    "isAvailable": true,
+    "createdAt": "2024-04-06T21:00:00Z",
+    "updatedAt": "2024-04-06T21:00:00Z"
+  }
+]

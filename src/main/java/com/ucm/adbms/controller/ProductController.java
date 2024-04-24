@@ -1,9 +1,13 @@
 package com.ucm.adbms.controller;
 
+import com.ucm.adbms.entity.Category;
 import com.ucm.adbms.entity.Product;
 import com.ucm.adbms.entity.ProductVariant;
+import com.ucm.adbms.entity.Review;
 import com.ucm.adbms.model.LoginModel;
+import com.ucm.adbms.repository.CategoryRepository;
 import com.ucm.adbms.repository.ProductRepository;
+import com.ucm.adbms.service.ReviewService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +28,12 @@ public class ProductController {
     @Autowired
     ProductRepository productRepository ;
 
+    @Autowired
+    ReviewService reviewService ;
+
+    @Autowired
+    CategoryRepository categoryRepository ;
+
     @GetMapping("/productvariant/{id}")
     public ResponseEntity<List<ProductVariant>> loginForm(@PathVariable String id, Model model, HttpSession session) {
 
@@ -35,5 +45,26 @@ public class ProductController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @GetMapping("/products/{category}")
+    public ResponseEntity<List<Product>> productBasedonCategory(@PathVariable String category, HttpSession session) {
+
+        Category categoryReq = categoryRepository.findByName(category) ;
+
+        List<Product> products =  productRepository.findByCategoryId(categoryReq.getCategoryId());
+
+        if (products != null) {
+            return new ResponseEntity<>(products, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/reviews/{productId}")
+    public ResponseEntity<List<Review>> getProductReviews(@PathVariable String productId) {
+        // Implement logic to fetch reviews for the specified product ID
+        List<Review> reviews = reviewService.getReviewsByProductId(productId);
+        return new ResponseEntity<>(reviews, HttpStatus.OK);
     }
 }

@@ -101,24 +101,3 @@ function displaySelectedImage(event, elementId) {
     }
 }
 
- var vendorRequestCtx = document.getElementById('vendorRequestChart').getContext('2d');
-    var vendorRequestChart = new Chart(vendorRequestCtx, {
-        type: 'bar',
-        data: {
-            labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            datasets: [{
-                label: 'Vendor Requests',
-                data: [12, 19, 3, 5, 2],
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });

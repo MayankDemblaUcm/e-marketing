@@ -19,6 +19,7 @@ public class ProductVariant {
     private String size;
     private double MRP;
     private double price;
+    private String imageurl ;
     private int quantity;
     private double commission;
     private String createdAt;

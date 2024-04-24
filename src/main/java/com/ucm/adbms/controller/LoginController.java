@@ -3,9 +3,11 @@ package com.ucm.adbms.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ucm.adbms.entity.Admin;
 import com.ucm.adbms.entity.Customer;
+import com.ucm.adbms.entity.Product;
 import com.ucm.adbms.entity.Vendor;
 import com.ucm.adbms.model.LoginModel;
 import com.ucm.adbms.model.UserModel;
+import com.ucm.adbms.service.ProductService;
 import com.ucm.adbms.service.UserService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 @ControllerAdvice
@@ -28,7 +31,7 @@ public class LoginController {
     private UserService userService ;
 
     @Autowired
-    private ResourceLoader resourceLoader;
+    private ProductService productService ;
 
     @GetMapping("/login")
     public String loginForm(Model model, HttpSession session) {
@@ -48,7 +51,13 @@ public class LoginController {
             model.addAttribute("admin", (Admin) typeOfUser) ;
             return "admin" ; // load admin page
         }else if(typeOfUser instanceof Customer){
-            model.addAttribute("customer", (Admin) typeOfUser) ;
+
+            model.addAttribute("customer", (Customer) typeOfUser) ;
+
+            // products
+            List<Product> products = productService.fetchAllProducts() ;
+            model.addAttribute("products", products) ;
+
             return "customer" ;
         }else if(typeOfUser instanceof Vendor){
             return "vendor" ;

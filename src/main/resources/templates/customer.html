@@ -55,7 +55,7 @@ margin-right: 20px; /* Adjust the margin as needed */
  /* Custom CSS for product image */
     .product-image {
         height: 200px; /* Set the initial height */
-        object-fit: cover; /* Ensure the image covers the entire container */
+        object-fit: contain; /* Ensure the image covers the entire container */
         transition: transform 0.2s; /* Add transition effect for smooth zoom */
     }
 
@@ -74,6 +74,30 @@ margin-right: 20px; /* Adjust the margin as needed */
     .badge {
         font-size: 20px;
     }
+
+.text-container {
+    float: left;
+    width: 60%; /* Adjust the width as needed */
+}
+
+.image-container {
+    float: right;
+    width: 40%; /* Adjust the width as needed */
+}
+
+.variant-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container {
+    text-align: center; /* Center the image within its container */
+}
+
+.btn-add-to-cart {
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
 
 
 </style>
@@ -126,7 +150,7 @@ margin-right: 20px; /* Adjust the margin as needed */
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span th:text="${customer.name}"></span>
+                        <span th:text="${customer.firstName}"></span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -151,130 +175,48 @@ margin-right: 20px; /* Adjust the margin as needed */
                 <h2>Featured Products</h2>
                     <div class="row">
                     <!-- Product Cards -->
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Reviews</button>
+                        <!-- Iterate over each product -->
+                        <div th:each="product : ${products}" class="col-md-4">
+                            <div class="card mb-4">
+                                <!-- Use Thymeleaf expressions to populate dynamic data -->
+                                <img th:src="${product.imageurl}" class="card-img-top product-image" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title" th:text="${product.name}">Product Name</h5>
+                                    <p class="card-text" th:text="${product.description}">Product Description</p>
+                                    <p class="card-text" th:text="'$' + ${product.productVariant[0].price}">Product Price</p>
+                                    <!-- Add to Cart button -->
+                                    <button class="btn btn-primary"  th:attr="product-index=${product.productId}" onclick="showVariantDialog(this.getAttribute('product-index'))">Add to Cart</button>
+                                    <!-- Button to show variant options -->
+                                    <button class="btn btn-info" th:attr="product-index=${product.productId}" onclick="showVariantDialog(this.getAttribute('product-index'))">Options</button>
+                                    <!-- Reviews button -->
+                                    <button class="btn btn-success">Reviews</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Add more product cards here -->
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <img src="https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/glasses.jpeg" class="card-img-top product-image" alt="Product Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Stylish Glasses</h5>
-                                <p class="card-text">High-quality glasses to enhance your style.</p>
-                                <p class="card-text">$19.99</p>
-                                <button class="btn btn-primary">Add to Cart</button>
-                                <button class="btn btn-success">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- Variant Options Modal -->
+        <div class="modal fade" id="variantModal" tabindex="-1" role="dialog" aria-labelledby="variantModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="variantModalLabel">Select Variant</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="variantOptions">
+                        <!-- Variant options will be dynamically populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- Right section for cart -->
 
         <div class="col-md-4">
@@ -382,7 +324,119 @@ margin-right: 20px; /* Adjust the margin as needed */
             document.getElementById("sale-end-clock").innerHTML = "Sale Ended";
         }
     }, 1000);
+
+    // JavaScript function to show the variant options modal
+function showVariantDialog(productId) {
+    // Perform AJAX request to fetch variants for the selected product
+    fetchVariants(productId);
+    // Show the modal
+    $('#variantModal').modal('show');
+}
+
+
+   function fetchVariants(productId) {
+    $.ajax({
+        url: '/productvariant/' + productId,
+        type: 'GET',
+        success: function(response) {
+            // Clear previous options
+            var variantOptions = document.getElementById('variantOptions');
+            variantOptions.innerHTML = '';
+
+            // Populate the modal with variant options in card format
+            response.forEach(function(variant) {
+                var card = document.createElement('div');
+                card.className = 'card mb-3';
+
+                var cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+
+                var textContainer = document.createElement('div');
+                textContainer.className = 'text-container';
+
+
+              // Variant Text
+                var title = document.createElement('h5');
+                title.className = 'card-title';
+                title.textContent = variant.name;
+
+                var description = document.createElement('p');
+                description.className = 'card-text';
+                description.textContent = variant.description;
+
+                var color = document.createElement('p');
+                color.className = 'card-text';
+                color.textContent = 'Color: ' + variant.color;
+
+                var size = document.createElement('p');
+                size.className = 'card-text';
+                size.textContent = 'Size: ' + variant.size;
+
+                var price = document.createElement('p');
+                price.className = 'card-text';
+                price.textContent = 'Price: $' + variant.price;
+
+                // Append text elements to text container
+                textContainer.appendChild(title);
+                textContainer.appendChild(description);
+                textContainer.appendChild(color);
+                textContainer.appendChild(size);
+                textContainer.appendChild(price);
+
+                // Variant Image
+                var imageContainer = document.createElement('div');
+                imageContainer.className = 'image-container';
+                var image = document.createElement('img');
+                image.className = 'variant-image';
+                image.src = variant.imageurl; // Assuming imageUrl is the property containing the image URL
+                image.alt = 'Variant Image';
+                imageContainer.appendChild(image);
+
+                 // Add to Cart button
+                var addButton = document.createElement('button');
+                addButton.className = 'btn btn-primary btn-add-to-cart';
+                addButton.textContent = 'Add to Cart';
+                addButton.addEventListener('click', function() {
+                    addToCart(variant); // Pass the variant data to addToCart function
+                });
+
+                // Append text container and image container to card body
+                cardBody.appendChild(textContainer);
+                cardBody.appendChild(imageContainer);
+                cardBody.appendChild(addButton);
+
+
+                // Append card body to card
+                card.appendChild(cardBody);
+
+                // Append card to variant options
+                variantOptions.appendChild(card);
+            });
+
+            // Show the modal after populating variants
+            $('#variantModal').modal('show');
+        },
+        error: function(xhr, status, error) {
+            console.error('Error fetching variants:', error);
+            // Handle error
+        }
+    });
+}
+
+// Function to handle adding variant to cart
+function addToCart(variant) {
+    // Implement functionality to add variant to cart
+    alert('Variant ' + variant.name + ' added to cart!');
+}
+
 </script>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Bootstrap JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

@@ -10,6 +10,7 @@
       {
         "name": "Blue Plaid",
         "description": "Classic blue plaid design.",
+        "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
         "color": "Blue",
         "size": "Large",
         "MRP": 35,
@@ -20,6 +21,7 @@
       {
         "name": "Striped White",
         "description": "Elegant striped white design.",
+        "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
         "color": "White",
         "size": "Medium",
         "MRP": 40,

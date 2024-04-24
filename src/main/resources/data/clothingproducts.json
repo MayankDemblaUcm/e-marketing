@@ -1,0 +1,566 @@
+[
+  {
+    "productId": "P001",
+    "name": "Men's Casual Shirt",
+    "description": "Comfortable cotton shirt for everyday wear.",
+    "categoryId": "Clothing",
+    "vendorId": "V001",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+    "productVariant": [
+      {
+        "name": "Blue Plaid",
+        "description": "Classic blue plaid design.",
+        "color": "Blue",
+        "size": "Large",
+        "MRP": 35,
+        "price": 25,
+        "quantity": 50,
+        "commission": 0.05
+      },
+      {
+        "name": "Striped White",
+        "description": "Elegant striped white design.",
+        "color": "White",
+        "size": "Medium",
+        "MRP": 40,
+        "price": 30,
+        "quantity": 30,
+        "commission": 0.07
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45a9b",
+        "userId": "USR123456",
+        "productId": "P001",
+        "rating": 4,
+        "comment": "Very comfortable and stylish shirt!",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-1.jpg",
+        "createdAt": "2024-03-17T22:00:00Z",
+        "updatedAt": "2024-03-17T22:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4,
+    "isAvailable": true,
+    "createdAt": "2024-03-21T12:00:00Z",
+    "updatedAt": "2024-03-21T12:00:00Z"
+  },
+  {
+    "productId": "P002",
+    "name": "Women's Denim Jeans",
+    "description": "Stretchable denim jeans for a perfect fit.",
+    "categoryId": "Clothing",
+    "vendorId": "V002",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-2.jpg",
+    "productVariant": [
+      {
+        "name": "Black Skinny",
+        "description": "Classic black skinny jeans.",
+        "color": "Black",
+        "size": "Small",
+        "MRP": 50,
+        "price": 40,
+        "quantity": 60,
+        "commission": 0.06
+      },
+      {
+        "name": "Blue Bootcut",
+        "description": "Stylish blue bootcut jeans.",
+        "color": "Blue",
+        "size": "Medium",
+        "MRP": 45,
+        "price": 35,
+        "quantity": 40,
+        "commission": 0.08
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45a9c",
+        "userId": "USR123457",
+        "productId": "P002",
+        "rating": 5,
+        "comment": "Absolutely love these jeans! Great quality and fit.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-2.jpg",
+        "createdAt": "2024-03-18T18:00:00Z",
+        "updatedAt": "2024-03-18T18:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.5,
+    "isAvailable": true,
+    "createdAt": "2024-03-22T10:00:00Z",
+    "updatedAt": "2024-03-22T10:00:00Z"
+  },
+  {
+    "productId": "P003",
+    "name": "Men's Leather Jacket",
+    "description": "Stylish leather jacket for a rugged look.",
+    "categoryId": "Clothing",
+    "vendorId": "V003",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-3.jpg",
+    "productVariant": [
+      {
+        "name": "Brown Biker",
+        "description": "Classic brown biker jacket.",
+        "color": "Brown",
+        "size": "Large",
+        "MRP": 120,
+        "price": 100,
+        "quantity": 25,
+        "commission": 0.1
+      },
+      {
+        "name": "Black Bomber",
+        "description": "Sleek black bomber jacket.",
+        "color": "Black",
+        "size": "Medium",
+        "MRP": 150,
+        "price": 130,
+        "quantity": 20,
+        "commission": 0.12
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45a9d",
+        "userId": "USR123458",
+        "productId": "P003",
+        "rating": 4.5,
+        "comment": "The leather quality is excellent and fits perfectly.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-3.jpg",
+        "createdAt": "2024-03-19T14:00:00Z",
+        "updatedAt": "2024-03-19T14:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.5,
+    "isAvailable": true,
+    "createdAt": "2024-03-23T15:00:00Z",
+    "updatedAt": "2024-03-23T15:00:00Z"
+  },
+  {
+    "productId": "P004",
+    "name": "Women's Summer Dress",
+    "description": "Light and airy dress perfect for hot summer days.",
+    "categoryId": "Clothing",
+    "vendorId": "V004",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-4.jpg",
+    "productVariant": [
+      {
+        "name": "Floral Print",
+        "description": "Beautiful floral print design.",
+        "color": "Pink",
+        "size": "Small",
+        "MRP": 45,
+        "price": 35,
+        "quantity": 40,
+        "commission": 0.08
+      },
+      {
+        "name": "Striped Yellow",
+        "description": "Elegant striped yellow design.",
+        "color": "Yellow",
+        "size": "Medium",
+        "MRP": 50,
+        "price": 40,
+        "quantity": 30,
+        "commission": 0.1
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45a9e",
+        "userId": "USR123459",
+        "productId": "P004",
+        "rating": 4.2,
+        "comment": "Love the design and fits perfectly!",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-4.jpg",
+        "createdAt": "2024-03-20T16:00:00Z",
+        "updatedAt": "2024-03-20T16:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.2,
+    "isAvailable": true,
+    "createdAt": "2024-03-24T11:00:00Z",
+    "updatedAt": "2024-03-24T11:00:00Z"
+  },
+  {
+    "productId": "P005",
+    "name": "Men's Sports Shorts",
+    "description": "Comfortable and breathable shorts for workouts.",
+    "categoryId": "Clothing",
+    "vendorId": "V005",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-5.jpg",
+    "productVariant": [
+      {
+        "name": "Black Solid",
+        "description": "Classic black solid design.",
+        "color": "Black",
+        "size": "Large",
+        "MRP": 25,
+        "price": 20,
+        "quantity": 60,
+        "commission": 0.05
+      },
+      {
+        "name": "Blue Striped",
+        "description": "Stylish blue striped design.",
+        "color": "Blue",
+        "size": "Medium",
+        "MRP": 30,
+        "price": 25,
+        "quantity": 45,
+        "commission": 0.06
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45a9f",
+        "userId": "USR123460",
+        "productId": "P005",
+        "rating": 4.8,
+        "comment": "Great shorts for workouts, very comfortable!",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-5.jpg",
+        "createdAt": "2024-03-21T20:00:00Z",
+        "updatedAt": "2024-03-21T20:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.8,
+    "isAvailable": true,
+    "createdAt": "2024-03-25T09:00:00Z",
+    "updatedAt": "2024-03-25T09:00:00Z"
+  },
+  {
+    "productId": "P006",
+    "name": "Men's Slim Fit T-Shirt",
+    "description": "Casual and comfortable slim fit t-shirt for men.",
+    "categoryId": "Clothing",
+    "vendorId": "V006",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-6.jpg",
+    "productVariant": [
+      {
+        "name": "Black Solid",
+        "description": "Classic black solid design.",
+        "color": "Black",
+        "size": "Medium",
+        "MRP": 15,
+        "price": 10,
+        "quantity": 70,
+        "commission": 0.03
+      },
+      {
+        "name": "Gray Heather",
+        "description": "Stylish gray heather design.",
+        "color": "Gray",
+        "size": "Large",
+        "MRP": 20,
+        "price": 15,
+        "quantity": 50,
+        "commission": 0.05
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa0",
+        "userId": "USR123461",
+        "productId": "P006",
+        "rating": 4.3,
+        "comment": "Love the fit and material of this t-shirt!",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-6.jpg",
+        "createdAt": "2024-03-22T14:00:00Z",
+        "updatedAt": "2024-03-22T14:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.3,
+    "isAvailable": true,
+    "createdAt": "2024-03-26T13:00:00Z",
+    "updatedAt": "2024-03-26T13:00:00Z"
+  },
+  {
+    "productId": "P007",
+    "name": "Women's Formal Blouse",
+    "description": "Elegant blouse perfect for formal occasions.",
+    "categoryId": "Clothing",
+    "vendorId": "V007",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-7.jpg",
+    "productVariant": [
+      {
+        "name": "White Button-Up",
+        "description": "Classic white button-up design.",
+        "color": "White",
+        "size": "Small",
+        "MRP": 30,
+        "price": 25,
+        "quantity": 40,
+        "commission": 0.06
+      },
+      {
+        "name": "Black Silk",
+        "description": "Luxurious black silk design.",
+        "color": "Black",
+        "size": "Medium",
+        "MRP": 35,
+        "price": 30,
+        "quantity": 35,
+        "commission": 0.08
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa1",
+        "userId": "USR123462",
+        "productId": "P007",
+        "rating": 4.7,
+        "comment": "Beautiful blouse, very elegant and fits perfectly!",
+        "attachmentLink": "hhttps://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-7.jpg",
+        "createdAt": "2024-03-23T12:00:00Z",
+        "updatedAt": "2024-03-23T12:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.7,
+    "isAvailable": true,
+    "createdAt": "2024-03-27T10:00:00Z",
+    "updatedAt": "2024-03-27T10:00:00Z"
+  },
+  {
+    "productId": "P008",
+    "name": "Men's Formal Suit",
+    "description": "Classic formal suit for men's business attire.",
+    "categoryId": "Clothing",
+    "vendorId": "V008",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-8.jpg",
+    "productVariant": [
+      {
+        "name": "Navy Blue",
+        "description": "Elegant navy blue suit.",
+        "color": "Navy Blue",
+        "size": "Large",
+        "MRP": 200,
+        "price": 150,
+        "quantity": 20,
+        "commission": 0.1
+      },
+      {
+        "name": "Charcoal Gray",
+        "description": "Sophisticated charcoal gray suit.",
+        "color": "Charcoal Gray",
+        "size": "Medium",
+        "MRP": 220,
+        "price": 180,
+        "quantity": 15,
+        "commission": 0.12
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa2",
+        "userId": "USR123463",
+        "productId": "P008",
+        "rating": 4.9,
+        "comment": "Absolutely stunning suit, fits perfectly!",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-8.jpg",
+        "createdAt": "2024-03-24T16:00:00Z",
+        "updatedAt": "2024-03-24T16:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.9,
+    "isAvailable": true,
+    "createdAt": "2024-03-28T09:00:00Z",
+    "updatedAt": "2024-03-28T09:00:00Z"
+  },
+  {
+    "productId": "P009",
+    "name": "Women's Leather Jacket",
+    "description": "Stylish leather jacket for women's fashion statement.",
+    "categoryId": "Clothing",
+    "vendorId": "V009",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-9.jpg",
+    "productVariant": [
+      {
+        "name": "Brown Biker",
+        "description": "Classic brown biker jacket.",
+        "color": "Brown",
+        "size": "Small",
+        "MRP": 150,
+        "price": 120,
+        "quantity": 25,
+        "commission": 0.1
+      },
+      {
+        "name": "Black Moto",
+        "description": "Sleek black moto jacket.",
+        "color": "Black",
+        "size": "Medium",
+        "MRP": 180,
+        "price": 150,
+        "quantity": 20,
+        "commission": 0.12
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa3",
+        "userId": "USR123464",
+        "productId": "P009",
+        "rating": 4.7,
+        "comment": "Love the style and quality of this jacket!",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-9.jpg",
+        "createdAt": "2024-03-25T14:00:00Z",
+        "updatedAt": "2024-03-25T14:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.7,
+    "isAvailable": true,
+    "createdAt": "2024-03-29T11:00:00Z",
+    "updatedAt": "2024-03-29T11:00:00Z"
+  },
+  {
+    "productId": "P010",
+    "name": "Women's Athletic Leggings",
+    "description": "Stretchable leggings perfect for workouts or casual wear.",
+    "categoryId": "Clothing",
+    "vendorId": "V010",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-10.jpg",
+    "productVariant": [
+      {
+        "name": "Black Solid",
+        "description": "Classic black solid design.",
+        "color": "Black",
+        "size": "Small",
+        "MRP": 30,
+        "price": 25,
+        "quantity": 50,
+        "commission": 0.05
+      },
+      {
+        "name": "Gray Heather",
+        "description": "Stylish gray heather design.",
+        "color": "Gray",
+        "size": "Medium",
+        "MRP": 35,
+        "price": 30,
+        "quantity": 40,
+        "commission": 0.07
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa4",
+        "userId": "USR123465",
+        "productId": "P010",
+        "rating": 4.5,
+        "comment": "Love these leggings! Super comfy and great for workouts.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-10.jpg",
+        "createdAt": "2024-03-26T12:00:00Z",
+        "updatedAt": "2024-03-26T12:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.5,
+    "isAvailable": true,
+    "createdAt": "2024-03-30T10:00:00Z",
+    "updatedAt": "2024-03-30T10:00:00Z"
+  },
+  {
+    "productId": "P011",
+    "name": "Men's Polo Shirt",
+    "description": "Casual and stylish polo shirt for men.",
+    "categoryId": "Clothing",
+    "vendorId": "V011",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-11.jpg",
+    "productVariant": [
+      {
+        "name": "White Solid",
+        "description": "Classic white solid design.",
+        "color": "White",
+        "size": "Large",
+        "MRP": 25,
+        "price": 20,
+        "quantity": 60,
+        "commission": 0.04
+      },
+      {
+        "name": "Navy Blue Striped",
+        "description": "Stylish navy blue striped design.",
+        "color": "Navy Blue",
+        "size": "Medium",
+        "MRP": 30,
+        "price": 25,
+        "quantity": 45,
+        "commission": 0.06
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa5",
+        "userId": "USR123466",
+        "productId": "P011",
+        "rating": 4.2,
+        "comment": "Great polo shirt, comfortable and fits well.",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-11.jpg",
+        "createdAt": "2024-03-27T14:00:00Z",
+        "updatedAt": "2024-03-27T14:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.2,
+    "isAvailable": true,
+    "createdAt": "2024-03-31T09:00:00Z",
+    "updatedAt": "2024-03-31T09:00:00Z"
+  },
+  {
+    "productId": "P012",
+    "name": "Unisex Hoodie Sweatshirt",
+    "description": "Cozy hoodie sweatshirt suitable for both men and women.",
+    "categoryId": "Clothing",
+    "vendorId": "V012",
+    "imageurl": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-12.jpg",
+    "productVariant": [
+      {
+        "name": "Black Solid",
+        "description": "Classic black solid design.",
+        "color": "Black",
+        "size": "Medium",
+        "MRP": 40,
+        "price": 35,
+        "quantity": 70,
+        "commission": 0.05
+      },
+      {
+        "name": "Gray Heather",
+        "description": "Stylish gray heather design.",
+        "color": "Gray",
+        "size": "Large",
+        "MRP": 45,
+        "price": 40,
+        "quantity": 60,
+        "commission": 0.07
+      }
+    ],
+    "reviews":[
+      {
+        "reviewid": "61a8d290bf5c6f35cda45aa6",
+        "userId": "USR123467",
+        "productId": "P012",
+        "rating": 4.6,
+        "comment": "This hoodie is so comfortable and looks great!",
+        "attachmentLink": "https://navigatorsappprofilepictures.s3.us-east-2.amazonaws.com/clothe-12.jpg",
+        "createdAt": "2024-04-01T12:00:00Z",
+        "updatedAt": "2024-04-01T12:00:00Z"
+      }
+    ],
+    "isApproved": true,
+    "averageRating": 4.6,
+    "isAvailable": true,
+    "createdAt": "2024-04-01T10:00:00Z",
+    "updatedAt": "2024-04-01T10:00:00Z"
+  }
+]

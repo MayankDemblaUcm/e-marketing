@@ -1,0 +1,47 @@
+{
+  "productId": "P002",
+  "name": "Product 2",
+  "description": "Description of Product 2",
+  "categoryId": "Cat002",
+  "vendorId": "V002",
+  "imageurl": "",
+  "productVariant": [
+    {
+      "name": "Variant 1",
+      "description": "Description of Variant 1",
+      "color": "Red",
+      "size": "Small",
+      "MRP": 20,
+      "price": 15,
+      "quantity": 50,
+      "commission": 0.05
+    },
+    {
+      "name": "Variant 2",
+      "description": "Description of Variant 2",
+      "color": "Blue",
+      "size": "Medium",
+      "MRP": 25,
+      "price": 20,
+      "quantity": 30,
+      "commission": 0.07
+    }
+  ],
+  "reviews":[
+    {
+      "_id": "61a8d290bf5c6f35cda45a9b",
+      "userId": "USR123456",
+      "productId": "PROD123",
+      "rating": 4,
+      "comment": "Great quality product, very satisfied with my purchase!",
+      "attachmentLink": "https://example.com/review-image.jpg",
+      "createdAt": "2024-03-17T22:00:00Z",
+      "updatedAt": "2024-03-17T22:00:00Z"
+    }
+  ],
+  "isApproved": true,
+  "averageRating": 4,
+  "isAvailable": true,
+  "createdAt": "2024-03-21T12:00:00Z",
+  "updatedAt": "2024-03-21T12:00:00Z"
+}

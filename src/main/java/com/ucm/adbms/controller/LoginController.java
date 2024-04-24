@@ -1,11 +1,17 @@
 package com.ucm.adbms.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ucm.adbms.entity.Admin;
+import com.ucm.adbms.entity.Customer;
+import com.ucm.adbms.entity.Vendor;
 import com.ucm.adbms.model.LoginModel;
 import com.ucm.adbms.model.UserModel;
 import com.ucm.adbms.service.UserService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +27,9 @@ public class LoginController {
     @Autowired
     private UserService userService ;
 
+    @Autowired
+    private ResourceLoader resourceLoader;
+
     @GetMapping("/login")
     public String loginForm(Model model, HttpSession session) {
 
@@ -33,9 +42,19 @@ public class LoginController {
 
         log.info("Inside POST login() with Input User : {}", user);
 
-        String typeOfUser = userService.identifyUser(user.getEmail()) ;
+        Object typeOfUser = userService.identifyUser(user.getEmail()) ;
 
-        return "signup";
+        if(typeOfUser instanceof Admin){
+            model.addAttribute("admin", (Admin) typeOfUser) ;
+            return "admin" ; // load admin page
+        }else if(typeOfUser instanceof Customer){
+            model.addAttribute("customer", (Admin) typeOfUser) ;
+            return "customer" ;
+        }else if(typeOfUser instanceof Vendor){
+            return "vendor" ;
+        }
+
+        return "login";
     }
 
     @GetMapping("/signup")

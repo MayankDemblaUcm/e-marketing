@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+
+    <style>
+    .scrollable-table {
+    height: 300px;
+    overflow-y: scroll;
+    border: 2px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Add space between tables */
+}
+
+.scrollable-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.scrollable-table th, .scrollable-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.scrollable-table th {
+    background-color: #cbf3f0;
+}
+
+/* Customize scrollbar */
+.scrollable-table::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollable-table::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey */
+}
+
+.scrollable-table::-webkit-scrollbar-thumb {
+    background: #888; /* Dark grey */
+}
+
+.scrollable-table::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker grey */
+}
+
+
+.navbar {
+  background-color: #005f73 !important;  /* Navbar background color */
+
+}
+
+.navbar-brand {
+    color: #94d2bd !important;
+    font-family: cursive;
+    font-size: xxx-large;
+}
+
+.navbar-brand:hover {
+  color: #2ec4b6 !important; /* Hover color for navbar brand */
+}
+
+.navbar-nav .nav-link {
+  color: #94d2bd !important; /* Navbar links text color */
+  font-size: x-large;
+  margin-left: 30px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f4f3ee !important; /* Hover color for navbar links */
+}
+
+.dropdown-menu {
+  background-color: #343a40; /* Dropdown menu background color */
+}
+
+.dropdown-item {
+  color: #ffffff; /* Dropdown item text color */
+}
+
+.dropdown-item:hover {
+  background-color: #007bff; /* Background color on hover for dropdown items */
+}
+
+.dropdown-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Divider color */
+}
+.navbar-nav .nav-item:first-child {
+margin-right: 20px; /* Adjust the margin as needed */
+}
+
+
+.cloned-variant-card {
+    margin-top: 20px; /* Adjust the spacing between each cloned card */
+}
+
+
+.variant-card {
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    padding: 15px; /* Add padding */
+    margin-bottom: 10px; /* Add bottom margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+
+    <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">E-Market</a>
+
+        <!-- Toggle button for small screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Published Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Add Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Modify Existing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sales Report</a>
+                </li>
+            </ul>
+            <!-- Profile dropdown -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span th:text="${admin.name}"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container-fluid mt-4">
+    <div class="row">
+        <!-- Left column for product image upload -->
+        <div class="col-md-6">
+            <h2>Upload Product Images</h2>
+            <div class="d-flex justify-content-start mb-4">
+                <img id="selectedAvatar" src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                      style="width: 200px; height: 200px; object-fit: cover;" alt="placeholder" />
+            </div>
+            <div class="d-flex justify-content-start">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="btn btn-primary btn-rounded">
+                            <label class="form-label text-white m-1" for="customFile2">Choose file</label>
+                            <input type="file" class="form-control d-none" id="customFile2" name="file" onchange="displaySelectedImage(event, 'selectedAvatar')" multiple />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Right column for product details -->
+        <div class="col-md-6">
+            <h2>Product Details</h2>
+            <!-- Product form -->
+            <form>
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" class="form-control" id="productName" placeholder="Enter product name">
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Product Description</label>
+                    <input type="text" class="form-control" id="productDescription" placeholder="Enter product description">
+                </div>
+                <div class="form-group">
+                    <label for="categoryId">Category</label>
+                    <input type="text" class="form-control" id="categoryId" placeholder="Enter category ID">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <hr>
+
+    <!-- Product Variant Card -->
+    <div class="row mt-4">
+        <!-- Left column for the original variant card -->
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h2 class="m-0">Add Product Variants</h2>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="removeVariantCard(this)" disabled>Delete Variant</button>
+                </div>
+                <div class="card-body">
+                    <!-- Variant fields (to be added dynamically) -->
+                    <div class="form-group">
+                        <label for="variantName">Variant Name</label>
+                        <input type="text" class="form-control" name="variantName" placeholder="Enter variant name">
+                    </div>
+                    <div class="form-group">
+                        <label for="variantDescription">Variant Description</label>
+                        <input type="text" class="form-control" name="variantDescription" placeholder="Enter variant description">
+                    </div>
+                    <div class="form-group">
+                        <label for="variantColor">Variant Color</label>
+                        <input type="text" class="form-control" name="variantColor" placeholder="Enter variant color">
+                    </div>
+                    <div class="form-group">
+                        <label for="variantSize">Variant Size</label>
+                        <input type="text" class="form-control" name="variantSize" placeholder="Enter variant size">
+                    </div>
+                    <div class="form-group">
+                        <label for="variantMRP">Variant MRP</label>
+                        <input type="number" class="form-control" name="variantMRP" placeholder="Enter variant MRP">
+                    </div>
+                    <div class="form-group">
+                        <label for="variantPrice">Variant Price</label>
+                        <input type="number" class="form-control" name="variantPrice" placeholder="Enter variant price">
+                    </div>
+                    <div class="form-group">
+                        <label for="variantQuantity">Variant Quantity</label>
+                        <input type="number" class="form-control" name="variantQuantity" placeholder="Enter variant quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="variantCommission">Variant Commission</label>
+                        <input type="number" class="form-control" name="variantCommission" placeholder="Enter variant commission">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right column for dynamically cloned variant cards -->
+        <div class="col-md-6" id="clonedVariantCards">
+            <!-- Dynamically cloned variant cards will be appended here -->
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary mt-3" style="height: 50px; width: 300px" onclick="cloneVariantCard()">Clone Variant</button>
+
+    <hr>
+
+    <button type="button" class="btn btn-success mt-3" style="height: 50px; width: 2100px" onclick="submitItems()">Submit</button>
+
+    <hr><hr><hr>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+
+<script>
+    function displaySelectedImage(event, imgId) {
+        const selectedFiles = event.target.files;
+        const previewImg = document.getElementById(imgId);
+
+        // Clear previous images
+        previewImg.src = '';
+
+        // Check if there are selected files
+        if (selectedFiles && selectedFiles.length > 0) {
+            const reader = new FileReader();
+
+            // Read the selected file as a Data URL
+            reader.readAsDataURL(selectedFiles[0]);
+
+            // Set the image source when the file is loaded
+            reader.onload = function (e) {
+                previewImg.src = e.target.result;
+            };
+        }
+    }
+
+ // Function to clone the variant card
+function cloneVariantCard() {
+    // Clone the original variant card
+    var originalVariantCard = document.querySelector('.card.shadow');
+    var clonedVariantCard = originalVariantCard.cloneNode(true);
+
+    // Enable the delete button on the cloned card
+    var deleteButton = clonedVariantCard.querySelector('.btn-danger');
+    deleteButton.disabled = false;
+
+    // Add an event listener to the delete button
+    deleteButton.addEventListener('click', function() {
+        removeVariantCard(clonedVariantCard);
+    });
+
+    // Append the cloned card to the right column
+    var clonedVariantContainer = document.getElementById('clonedVariantCards');
+    clonedVariantContainer.appendChild(clonedVariantCard);
+}
+
+// Function to remove the cloned variant card
+function removeVariantCard(card) {
+    card.remove();
+}
+
+
+
+</script>
+
+
+</body>
+</html>

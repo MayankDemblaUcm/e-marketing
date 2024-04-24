@@ -1,0 +1,88 @@
+{
+  "customerId": "CUST001",
+  "password": "customerhashedpassword",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johndoe@example.com",
+  "phoneNumber": "+1234567890",
+  "reviews": [
+    {
+      "productId": "PROD123",
+      "rating": 4,
+      "comment": "Great quality product, very satisfied with my purchase!",
+      "attachmentLink": "https://example.com/review-image.jpg",
+      "createdAt": "2024-03-17T22:00:00Z",
+      "updatedAt": "2024-03-17T22:00:00Z"
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "Order001",
+      "products": [
+        {
+          "productId": "P002",
+          "name": "Product 2",
+          "variant": {
+            "name": "Variant 1",
+            "description": "Description of Variant 1",
+            "color": "Red",
+            "size": "Small",
+            "MRP": 20,
+            "price": 15,
+            "quantity": 50,
+            "commission": 0.05
+          },
+          "quantity": 2
+        },
+        {
+          "productId": "P003",
+          "name": "Product 3",
+          "variant": {
+            "name": "Variant 1",
+            "description": "Description of Variant 1",
+            "color": "Black",
+            "size": "Medium",
+            "MRP": 30,
+            "price": 25,
+            "quantity": 20,
+            "commission": 0.08
+          },
+          "quantity": 1
+        }
+      ],
+      "status": "Pending",
+      "PaymentStatus": "Unpaid",
+      "totalAmount": 50,
+      "address": "123 Main St, City, Country",
+      "createdAt": "2024-03-21T12:00:00Z",
+      "updatedAt": "2024-03-21T12:00:00Z"
+    }
+  ],
+  "refundRequests": [
+    {
+      "orderId": "Order002",
+      "products": [
+        {
+          "productId": "P003",
+          "name": "Product 3",
+          "variant": {
+            "name": "Variant 1",
+            "description": "Description of Variant 1",
+            "color": "Black",
+            "size": "Medium",
+            "MRP": 30,
+            "price": 25,
+            "quantity": 20,
+            "commission": 0.08
+          }
+        }
+      ],
+      "reason": "Faulty product",
+      "status": "Pending",
+      "createdAt": "2024-03-21T12:00:00Z",
+      "updatedAt": "2024-03-21T12:00:00Z"
+    }
+  ],
+  "createdAt": "2024-03-21T12:00:00Z",
+  "updatedAt": "2024-03-21T12:00:00Z"
+}

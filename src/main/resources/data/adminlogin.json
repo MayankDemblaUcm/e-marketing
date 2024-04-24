@@ -1,0 +1,81 @@
+{
+  "adminId": "A001",
+  "password": "adminpassword",
+  "email": "admin@example.com",
+  "phoneNumber": "+1234567890",
+  "commission": 0.1,
+  "vendor_request": [
+    {
+      "vendorId": "V002",
+      "requestType": "Update",
+      "products": [
+        {
+          "productId": "P002",
+          "name": "Updated Product",
+          "description": "Updated Description",
+          "categoryId": "Cat002",
+          "vendorId": "V002",
+          "productVariant": [
+            {
+              "name": "Variant 1",
+              "description": "Description of Variant 1",
+              "color": "Blue",
+              "size": "Large",
+              "MRP": 25,
+              "price": 20,
+              "quantity": 50,
+              "commission": 0.07
+            }
+          ],
+          "isApproved": true,
+          "averageRating": 0,
+          "isAvailable": true,
+          "createdAt": "2024-03-21T12:00:00Z",
+          "updatedAt": "2024-03-21T12:00:00Z"
+        }
+      ],
+      "status": "Pending",
+      "description": "Update product details",
+      "createdAt": "2024-03-21T12:00:00Z",
+      "updatedAt": "2024-03-21T12:00:00Z"
+    }
+  ],
+  "refund_request": [
+    {
+      "orderId": "Order002",
+      "customerId": "C002",
+      "products": [
+        {
+          "productId": "P003",
+          "name": "Product 3",
+          "description": "Description of Product 3",
+          "categoryId": "Cat003",
+          "vendorId": "V003",
+          "productVariant": [
+            {
+              "name": "Variant 1",
+              "description": "Description of Variant 1",
+              "color": "Black",
+              "size": "Medium",
+              "MRP": 30,
+              "price": 25,
+              "quantity": 20,
+              "commission": 0.08
+            }
+          ],
+          "isApproved": true,
+          "averageRating": 0,
+          "isAvailable": true,
+          "createdAt": "2024-03-21T12:00:00Z",
+          "updatedAt": "2024-03-21T12:00:00Z"
+        }
+      ],
+      "reason": "Faulty product",
+      "status": "Pending",
+      "createdAt": "2024-03-21T12:00:00Z",
+      "updatedAt": "2024-03-21T12:00:00Z"
+    }
+  ],
+  "createdAt": "2024-03-21T12:00:00Z",
+  "updatedAt": "2024-03-21T12:00:00Z"
+}
